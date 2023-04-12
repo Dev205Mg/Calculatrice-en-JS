@@ -1,0 +1,118 @@
+body {
+  background: rgb(172, 172, 172);
+  height: 100vh;
+  overflow: hidden;
+}
+
+main {
+  width: 250px;
+  background: rgb(202, 202, 202);
+  margin: 0 auto;
+  border-radius: 15px;
+  box-shadow: 5px 6px 6px rgba(0, 0, 0, 0.699), -7px -6px 8px rgb(238 237 237);
+  margin-top: 10%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "inpt inpt inpt inpt"
+    "ac prtg prtd div"
+    "bt7 bt8 bt9 mult"
+    "bt4 bt5 bt6 sous"
+    "bt1 bt2 bt3 add"
+    "bt0 bt0 dat equal";
+}
+
+input[type="text"] {
+  grid-area: inpt;
+  border-radius: 15px;
+  background: rgb(202, 202, 202);
+  width: 208px;
+  height: 30px;
+  margin: 12px 14px;
+  text-align: right;
+  font-size: 20px;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+button {
+  width: 46px;
+  border-radius: 50%;
+  box-shadow: 3px 2px 3px rgba(0, 0, 0, 0.637), -4px -2px 6px rgb(238, 237, 237);
+  margin: 7px;
+  font-weight: bold;
+  border: none;
+  background: rgba(255, 255, 255, 0.329);
+  transition: 0.2s ease;
+}
+
+button:hover {
+  background: rgb(255, 255, 255);
+}
+
+.dat {
+  grid-area: dat;
+}
+.mult {
+  grid-area: mult;
+}
+.sous {
+  grid-area: sous;
+}
+.div {
+  grid-area: div;
+}
+.add {
+  grid-area: add;
+}
+#egal {
+  grid-area: equal;
+}
+.zero {
+  grid-area: bt0;
+  width: 104px;
+  border-radius: 25px;
+}
+
+/* ********************** footer **************************************/
+.signature {
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+  background: white;
+  position: absolute;
+  /* bottom: 20px;
+  right: 5px; */
+  border-radius: 20px;
+  z-index: -1;
+  transition: 0.3s ease;
+  filter: hue-rotate(0deg);
+}
+
+.signature p {
+  margin: 10px;
+  text-align: center;
+  font-size: 15px;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.span {
+  color: rgb(255, 0, 0);
+  font-weight: 900;
+  transition: 0.3s ease, color 2.5s ease;
+  animation: filterColor 8s infinite;
+  filter: hue-rotate(0deg);
+}
+
+.classListe {
+  background: rgb(26, 155, 127);
+  animation: filterColor 1s infinite;
+  color: rgb(0, 4, 255);
+}
+
+@keyframes filterColor {
+  to {
+    filter: hue-rotate(720deg);
+  }
+}
